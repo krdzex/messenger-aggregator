@@ -25,10 +25,10 @@ const Gmail = () => {
     }, [dispatch])
 
 
-    const onMailClick = () => {
+    const onMailClick = async () => {
         setUnreadMsg(0);
         for (let i = 0; i < unreadMessageId.length; i++) {
-            readUnreadMessagges(unreadMessageId[i].id)
+            await readUnreadMessagges(unreadMessageId[i].id)
         }
     }
 

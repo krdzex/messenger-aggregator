@@ -9,12 +9,10 @@
 
 .popUpWrapper {
   background-color: lightgrey;
-  position: absolute;
-  left: 50%;
-  transform: translate(-50%);
-  width: 500px;
-  height: 300px;
-  overflow: auto;
+  width: 550px;
+  height: 538px;
+  float: right;
+  padding: 0px 5px;
 }
 
 .imageWrapper, .slackWrapper {
@@ -60,4 +58,14 @@
 
 .green {
   background-color: green;
+}
+
+.images {
+  float: left;
+  margin-right: 20px;
+}
+
+.popUpMessages {
+  overflow: auto;
+  height: 86%;
 }
