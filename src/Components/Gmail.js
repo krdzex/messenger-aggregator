@@ -8,7 +8,7 @@ const Gmail = () => {
     const [unreadMsg, setUnreadMsg] = useState(0);
     const unreadMessageId = useSelector(state => state.gmailMessangerReducer)
 
-    useEffect(() => {
+    /*useEffect(() => {
         let ids;
         getUnreadMessageIds(data => {
             ids = data.messages;
@@ -23,7 +23,7 @@ const Gmail = () => {
         }
         )
     }, [dispatch])
-
+*/
 
     const onMailClick = async () => {
         setUnreadMsg(0);
