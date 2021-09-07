@@ -1,4 +1,4 @@
-.mainComponent {
+.mainComponent, .startScreen {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -7,16 +7,29 @@
   grid-template-columns: auto auto auto;
 }
 
+.startScreen .imageWrapper {
+  float: left;
+}
+
+.startScreen .slackWrapper {
+  float: right;
+}
+
+.startScreen {
+  width: fit-content;
+}
+
 .popUpWrapper {
   background-color: lightgrey;
   width: 550px;
   height: 538px;
-  float: right;
   padding: 0px 5px;
+  border-radius: 10px;
 }
 
 .imageWrapper, .slackWrapper {
   position: relative;
+  cursor: pointer;
 }
 
 .unreadMsgNumber {
@@ -61,11 +74,129 @@
 }
 
 .images {
-  float: left;
   margin-right: 20px;
 }
 
 .popUpMessages {
   overflow: auto;
   height: 86%;
+}
+
+@media (max-width: 375.98px) {
+  .mainComponent .slackWrapper img {
+    width: 210px !important;
+  }
+  .mainComponent .imageWrapper img {
+    width: 250px !important;
+  }
+  .mainComponent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: inherit;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+  .popUpWrapper {
+    width: fit-content;
+    margin: 15px;
+  }
+  .startScreen {
+    width: auto;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: none;
+    display: block;
+  }
+  .startScreen .images {
+    margin-right: 20px;
+    margin-left: 10px;
+  }
+  .startScreen .slackWrapper {
+    margin-left: 10px;
+  }
+  .images {
+    margin-right: 0px;
+  }
+  .footer, .header {
+    position: inherit !important;
+  }
+}
+
+@media (min-width: 376px) and (max-width: 575.98px) {
+  .mainComponent .slackWrapper img {
+    width: 210px !important;
+  }
+  .mainComponent .imageWrapper img {
+    width: 250px !important;
+  }
+  .mainComponent {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: inherit;
+    top: auto;
+    left: auto;
+    transform: none;
+  }
+  .popUpWrapper {
+    width: fit-content;
+    margin: 15px;
+  }
+  .startScreen {
+    width: auto;
+  }
+  .images {
+    margin-right: 0px;
+  }
+  .footer, .header {
+    position: inherit !important;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .mainComponent {
+    display: block;
+    top: 52%
+  }
+  .images {
+    display: flex
+  }
+  .mainComponent .slackWrapper img {
+    width: 210px !important;
+  }
+  .mainComponent .imageWrapper img {
+    width: 250px !important;
+  }
+}
+
+.popUpWrapper h3 {
+  text-align: center;
+}
+
+.slack {
+  min-height: 60px;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  border-top: 1px solid black;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  top: 0;
+  position: fixed;
+  border-bottom: 1px solid black;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

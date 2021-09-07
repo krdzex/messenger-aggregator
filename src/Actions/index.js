@@ -11,3 +11,33 @@ export const getMessageInformation = (messagesInformation) => {
         payload: messagesInformation
     }
 }
+
+export const getSlackMessages = (slackMessages) => {
+    return {
+        type: "GET_SLACK_MESSAGES",
+        payload: slackMessages
+    }
+}
+
+export const getLastRead = (lastRead) => {
+    return {
+        type: "GET_SLACK_CHANNEL_LAST_READ",
+        payload: lastRead
+    }
+}
+export const getChannelName = (channelName) => {
+    return {
+        type: "GET_SLACK_CHANNEL_NAME",
+        payload: channelName
+    }
+}
+export const openGmail = () => {
+    return {
+        type: "OPEN_GMAIL",
+    }
+}
+export const openSlack = () => {
+    return {
+        type: "OPEN_SLACK"
+    }
+}

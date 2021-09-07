@@ -3,12 +3,12 @@ import { useSelector } from 'react-redux';
 import GmailMessage from './GmailMessage';
 const PopUpGmail = () => {
 
-    const gmailMessage = useSelector(state => state.gmailMessageInformation)
+    const gmailMessages = useSelector(state => state.gmailMessageInformation)
     return (
         <div className="popUpWrapper">
-            <h3 style={{ marginLeft: "10px" }}>You recived {gmailMessage.length} emails!</h3>
+            <h3 style={{ marginLeft: "10px" }}>You recived {gmailMessages.length} emails!</h3>
             <div className="popUpMessages">
-                {gmailMessage.map((message, id) => {
+                {gmailMessages.map((message, id) => {
                     return <GmailMessage messageInfo={message} key={id} id={id} />
                 })}
             </div>
