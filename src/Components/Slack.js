@@ -40,7 +40,7 @@ const Slack = () => {
 
     return (
         <div className="slackWrapper">
-            <img src={slackLogo} alt="slack logo" onClick={onclickImage} style={{ width: "300px", height: "225px", padding: "20px" }}></img>
+            <img src={slackLogo} alt="slack logo" onClick={onclickImage} style={{ width: "200px", height: "170px", padding: "20px" }}></img>
             <div className={unreadMsgNo !== 0 ? "unreadMsgNumber" : "unreadMsgNumber green"}>{unreadMsgNo}</div>
         </div>
     );

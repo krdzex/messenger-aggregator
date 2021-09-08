@@ -41,3 +41,9 @@ export const openSlack = () => {
         type: "OPEN_SLACK"
     }
 }
+
+export const closePopUp = () => {
+    return {
+        type: "CLOSE_POPUP"
+    }
+}

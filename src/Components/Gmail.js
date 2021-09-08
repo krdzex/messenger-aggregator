@@ -9,6 +9,7 @@ const Gmail = () => {
     const unreadMessageId = useSelector(state => state.gmailMessangerReducer)
 
     useEffect(() => {
+        console.log(process.env)
         let ids;
         getUnreadMessageIds(data => {
             ids = data.messages;
@@ -36,7 +37,7 @@ const Gmail = () => {
 
     return (
         <div className="imageWrapper">
-            <img src={gmailLogo} alt="gmail logo" onClick={onMailClick} style={{ width: "300px", height: "225px", padding: "20px" }}></img>
+            <img src={gmailLogo} alt="gmail logo" onClick={onMailClick} style={{ width: "200px", height: "170px", padding: "20px" }}></img>
             <div className={unreadMsg !== 0 ? "unreadMsgNumber" : "unreadMsgNumber green"}>{unreadMsg === 100 ? "99+" : unreadMsg}</div>
         </div>
     );
